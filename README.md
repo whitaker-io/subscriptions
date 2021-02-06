@@ -9,16 +9,16 @@ Add the primary library to your project
 ------
 Add the different Subscription Implementations
 ```bash
-  go get -u github.com/whitaker-io/machine/subscriptions/kafka
+  go get -u github.com/whitaker-io/subscriptions/kafka
 ```
 ```bash
-  go get -u github.com/whitaker-io/machine/subscriptions/redis
+  go get -u github.com/whitaker-io/subscriptions/redis
 ```
 ```bash
-  go get -u github.com/whitaker-io/machine/subscriptions/pubsub
+  go get -u github.com/whitaker-io/subscriptions/pubsub
 ```
 ```bash
-  go get -u github.com/whitaker-io/machine/subscriptions/sqs
+  go get -u github.com/whitaker-io/subscriptions/sqs
 ```
 
 ***

@@ -27,6 +27,8 @@ github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+
 github.com/stretchr/testify v1.6.1/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
 github.com/traefik/yaegi v0.9.7 h1:CbeKjEhy3DoSC8xC4TQF2Mhmd7u3Cjqluz1//x6Vtcs=
 github.com/traefik/yaegi v0.9.7/go.mod h1:FAYnRlZyuVlEkvnkHq3bvJ1lW5be6XuwgLdkYgYG6Lk=
+github.com/traefik/yaegi v0.9.14 h1:Dg6hYcDtxWY3L9jP2OjoK+LSX59wF0sckJXT/cYNqA4=
+github.com/traefik/yaegi v0.9.14/go.mod h1:FAYnRlZyuVlEkvnkHq3bvJ1lW5be6XuwgLdkYgYG6Lk=
 github.com/valyala/bytebufferpool v1.0.0 h1:GqA5TC/0021Y/b9FG4Oi9Mr3q7XYx6KllzawFIhcdPw=
 github.com/valyala/bytebufferpool v1.0.0/go.mod h1:6bBcMArwyJ5K/AmCkWv1jt77kVWyCJ6HpOuEn7z0Csc=
 github.com/valyala/fasthttp v1.17.0 h1:P8/koH4aSnJ4xbd0cUUFEGQs3jQqIxoDDyRQrUiAkqg=
@@ -43,6 +45,8 @@ github.com/whitaker-io/machine v0.9.8 h1:30eFOxw9xlk1/mjud7QHkdw1k3d/ru7wsv8Bc7Q
 github.com/whitaker-io/machine v0.9.8/go.mod h1:5cTwpR1UHis0jGZAdeXQYoz1va5OWzJCSJI8e8c2+ag=
 github.com/whitaker-io/machine v0.10.0 h1:Ht+diTvCh63Yt4pqQZ6QDZhy9sV4tCIXf/NZL83SPso=
 github.com/whitaker-io/machine v0.10.0/go.mod h1:2zeG8AOtxelSZF69OFyzmd4xSVA9MyHQMtARL2/9QXc=
+github.com/whitaker-io/machine v0.11.0 h1:Vrofj96eOntcTZCzPzB722SsGaL8GmPxRLGt0ovB8h8=
+github.com/whitaker-io/machine v0.11.0/go.mod h1:NQjmlPFu4lChymCoymG2dxFaK10k+s9mLOxXW50H7Gg=
 github.com/wsxiaoys/terminal v0.0.0-20160513160801-0940f3fc43a0/go.mod h1:IXCdmsXIht47RaVFLEdVnh1t+pgYtTAhQGj73kz+2DM=
 github.com/xdg/scram v0.0.0-20180814205039-7eeb5667e42c/go.mod h1:lB8K/P019DLNhemzwFU4jHLhdvlE6uDZjXFejJXr49I=
 github.com/xdg/stringprep v1.0.0/go.mod h1:Jhud4/sHMO4oL310DaZAKk9ZaJ08SJfe+sJh0HrGL1Y=
@@ -63,4 +67,5 @@ golang.org/x/text v0.3.3/go.mod h1:5Zoc/QRtKVWzQhOtBMvqHzDpF6irO9z98xDceosuGiQ=
 golang.org/x/tools v0.0.0-20180917221912-90fa682c2a6e/go.mod h1:n7NCudcB/nEzxVGmLbDWY5pfWTLqBcC2KZ6jyYvM4mQ=
 golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543/go.mod h1:I/5z698sn9Ka8TeJc9MKroUUfqBBauWjQqLJ2OPfmY0=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
+gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c h1:dUUwHk2QECo/6vqA44rthZ8ie2QXMNeKRTHCNY2nXvo=
 gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c/go.mod h1:K4uyk7z7BCEPqu6E+C64Yfv1cQ7kz7rIZviUmN+EgEM=

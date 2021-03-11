@@ -146,6 +146,8 @@ github.com/valyala/tcplisten v0.0.0-20161114210144-ceec8f93295a h1:0R4NLDRDZX6Jc
 github.com/valyala/tcplisten v0.0.0-20161114210144-ceec8f93295a/go.mod h1:v3UYOV9WzVtRmSR+PDvWpU/qWl4Wa5LApYYX4ZtKbio=
 github.com/whitaker-io/machine v0.11.4 h1:NPy53s5xhuE5+naPyo+LRW9ym7mxorO59AFMOHoCezg=
 github.com/whitaker-io/machine v0.11.4/go.mod h1:JwN3ei4KUbV2041ZS5RPhdz5xNizv0JuzpUAht3mKVA=
+github.com/whitaker-io/machine v0.11.10 h1:1ypN8jzo0JuetoHxSwuvsfKdTmjEsh2fzH+PqtfQP20=
+github.com/whitaker-io/machine v0.11.10/go.mod h1:JwN3ei4KUbV2041ZS5RPhdz5xNizv0JuzpUAht3mKVA=
 github.com/yuin/goldmark v1.1.25/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=
 github.com/yuin/goldmark v1.1.27/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=
 github.com/yuin/goldmark v1.1.32/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=

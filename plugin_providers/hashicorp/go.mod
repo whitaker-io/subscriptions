@@ -1,4 +1,4 @@
-module github.com/whitaker-io/subscriptions/plugins/hashicorp
+module github.com/whitaker-io/components/plugin_providers/hashicorp
 
 go 1.16
 

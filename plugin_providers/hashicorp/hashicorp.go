@@ -29,61 +29,41 @@ func (hc *hashicorpProvider) Load(pd *machine.PluginDefinition) (interface{}, er
 		return nil, fmt.Errorf("attributes missing protocol_version or bad type")
 	}
 
-	providerType, ok := pd.Attributes["provider_type"]
-
-	if _, isString := providerType.(string); !ok || !isString {
-		return nil, fmt.Errorf("attributes missing provider_type or bad type")
-	}
-
 	handshakeConfig := hcplugin.HandshakeConfig{
 		ProtocolVersion:  protocolVersion.(uint),
 		MagicCookieKey:   magicCookieKey.(string),
 		MagicCookieValue: magicCookieValue.(string),
 	}
 
-	pluginMap := map[string]hcplugin.Plugin{}
-
-	switch providerType.(string) {
-	case "subscription":
-		pluginMap["subscription"] = &SubscriptionPlugin{}
-	case "retriever":
-		pluginMap["retriever"] = &RetrieverPlugin{}
-	case "applicative":
-		pluginMap["applicative"] = &ApplicativePlugin{}
-	case "fold":
-		pluginMap["fold"] = &FoldPlugin{}
-	case "fork":
-		pluginMap["fork"] = &ForkPlugin{}
-	case "sender":
-		pluginMap["sender"] = &SenderPlugin{}
-	default:
-		return nil, fmt.Errorf("invalid provider_type %s", providerType.(string))
+	pluginMap := map[string]hcplugin.Plugin{
+		"subscription": &SubscriptionPlugin{},
+		"applicative":  &ApplicativePlugin{},
+		"fold":         &FoldPlugin{},
+		"fork":         &ForkPlugin{},
+		"sender":       &SenderPlugin{},
 	}
 
 	client := hcplugin.NewClient(&hcplugin.ClientConfig{
 		HandshakeConfig: handshakeConfig,
 		Plugins:         pluginMap,
 		Cmd:             exec.Command(pd.Payload),
+		AllowedProtocols: []hcplugin.Protocol{
+			hcplugin.ProtocolGRPC,
+		},
 	})
 
-	rpcClient, err := client.Client()
-	if err != nil {
+	var raw interface{}
+
+	if rpcClient, err := client.Client(); err != nil {
+		return nil, err
+	} else if raw, err = rpcClient.Dispense(pd.Symbol); err != nil {
 		return nil, err
 	}
 
-	raw, err := rpcClient.Dispense(pd.Symbol)
-	if err != nil {
-		return nil, err
-	}
-
-	switch providerType.(string) {
+	switch pd.Symbol {
 	case "subscription":
 		return func(map[string]interface{}) machine.Subscription {
 			return raw.(machine.Subscription)
-		}, nil
-	case "retriever":
-		return func(map[string]interface{}) machine.Retriever {
-			return raw.(Retriever).Retriever
 		}, nil
 	case "applicative":
 		return func(map[string]interface{}) machine.Applicative {
@@ -101,8 +81,10 @@ func (hc *hashicorpProvider) Load(pd *machine.PluginDefinition) (interface{}, er
 		return func(map[string]interface{}) machine.Sender {
 			return raw.(Sender).Sender
 		}, nil
+	case "retriever":
+		return nil, fmt.Errorf("retriever symbol not supported")
 	default:
-		return nil, fmt.Errorf("invalid provider_type %s", providerType.(string))
+		return nil, fmt.Errorf("invalid symbol %s", pd.Symbol)
 	}
 }
 

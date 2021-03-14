@@ -70,7 +70,7 @@ func (k *sqs) Close() error {
 	return nil
 }
 
-// New func to provide a machine.Subscription based on Google Pub/Sub
+// New func to provide a machine.Subscription based on AWS SQS
 func New(region string, config *ReadConfig, logger machine.Logger) (machine.Subscription, error) {
 	s := session.Must(session.NewSession())
 	svc := ps.New(s, aws.NewConfig().WithRegion(region))

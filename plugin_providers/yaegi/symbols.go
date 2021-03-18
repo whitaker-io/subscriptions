@@ -25,7 +25,7 @@ func init() {
 
 		// interface wrapper definitions
 		"_Subscription": reflect.ValueOf((*_github_com_whitaker_io_machine_Subscription)(nil)),
-		"_Publisher": reflect.ValueOf((*_github_com_whitaker_io_machine_Publisher)(nil)),
+		"_Publisher":    reflect.ValueOf((*_github_com_whitaker_io_machine_Publisher)(nil)),
 	}
 }
 

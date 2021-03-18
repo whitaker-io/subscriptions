@@ -21,10 +21,11 @@ func init() {
 		"Retriever":    reflect.ValueOf((*machine.Retriever)(nil)),
 		"Fold":         reflect.ValueOf((*machine.Fold)(nil)),
 		"Fork":         reflect.ValueOf((*machine.Fork)(nil)),
-		"Sender":       reflect.ValueOf((*machine.Sender)(nil)),
+		"Publisher":    reflect.ValueOf((*machine.Sender)(nil)),
 
 		// interface wrapper definitions
 		"_Subscription": reflect.ValueOf((*_github_com_whitaker_io_machine_Subscription)(nil)),
+		"_Publisher": reflect.ValueOf((*_github_com_whitaker_io_machine_Publisher)(nil)),
 	}
 }
 
@@ -37,4 +38,13 @@ type _github_com_whitaker_io_machine_Subscription struct {
 func (W _github_com_whitaker_io_machine_Subscription) Close() error { return W.WClose() }
 func (W _github_com_whitaker_io_machine_Subscription) Read(ctx context.Context) []machine.Data {
 	return W.WRead(ctx)
+}
+
+// _github_com_whitaker_io_machine_Publisher is an interface wrapper for Publisher type
+type _github_com_whitaker_io_machine_Publisher struct {
+	WSend func(payload []machine.Data) error
+}
+
+func (W _github_com_whitaker_io_machine_Publisher) Send(payload []machine.Data) error {
+	return W.WSend(payload)
 }

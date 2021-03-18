@@ -40,7 +40,7 @@ func (hc *hashicorpProvider) Load(pd *machine.PluginDefinition) (interface{}, er
 		"applicative":  &ApplicativePlugin{},
 		"fold":         &FoldPlugin{},
 		"fork":         &ForkPlugin{},
-		"sender":       &SenderPlugin{},
+		"sender":       &PublisherPlugin{},
 	}
 
 	client := hcplugin.NewClient(&hcplugin.ClientConfig{
@@ -62,25 +62,15 @@ func (hc *hashicorpProvider) Load(pd *machine.PluginDefinition) (interface{}, er
 
 	switch pd.Symbol {
 	case "subscription":
-		return func(map[string]interface{}) machine.Subscription {
-			return raw.(machine.Subscription)
-		}, nil
+		return raw.(machine.Subscription), nil
 	case "applicative":
-		return func(map[string]interface{}) machine.Applicative {
-			return raw.(Applicative).Applicative
-		}, nil
+		return raw.(Applicative).Applicative, nil
 	case "fold":
-		return func(map[string]interface{}) machine.Fold {
-			return raw.(Fold).Fold
-		}, nil
+		return raw.(Fold).Fold, nil
 	case "fork":
-		return func(map[string]interface{}) machine.Fork {
-			return raw.(Fork).Fork
-		}, nil
-	case "sender":
-		return func(map[string]interface{}) machine.Sender {
-			return raw.(Sender).Sender
-		}, nil
+		return raw.(Fork).Fork, nil
+	case "publisher":
+		return raw.(Publisher), nil
 	case "retriever":
 		return nil, fmt.Errorf("retriever symbol not supported")
 	default:

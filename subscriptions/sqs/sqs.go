@@ -16,7 +16,6 @@ import (
 type sqs struct {
 	subscription *ps.SQS
 	config       *ReadConfig
-	logger       machine.Logger
 }
 
 // ReadConfig config used for reading messages values match sqs.ReceiveMessageInput from github.com/aws/aws-sdk-go/service/sqs
@@ -47,13 +46,13 @@ func (k *sqs) Read(ctx context.Context) []machine.Data {
 	output, err := k.subscription.ReceiveMessage(input)
 
 	if err != nil {
-		k.logger.Error(fmt.Sprintf("error reading from sqs - %v", err))
+		panic(fmt.Sprintf("error reading from sqs - %v", err))
 	} else {
 		for _, message := range output.Messages {
 			m := map[string]interface{}{}
 			err := json.Unmarshal([]byte(*message.Body), &m)
 			if err != nil {
-				k.logger.Error(fmt.Sprintf("error unmarshalling from sqs - %v", err))
+				panic(fmt.Sprintf("error unmarshalling from sqs - %v", err))
 			} else {
 				m["__attributes"] = message.Attributes
 				m["__messageAttributes"] = message.MessageAttributes
@@ -71,13 +70,12 @@ func (k *sqs) Close() error {
 }
 
 // New func to provide a machine.Subscription based on AWS SQS
-func New(region string, config *ReadConfig, logger machine.Logger) (machine.Subscription, error) {
+func New(region string, config *ReadConfig) (machine.Subscription, error) {
 	s := session.Must(session.NewSession())
 	svc := ps.New(s, aws.NewConfig().WithRegion(region))
 
 	return &sqs{
 		subscription: svc,
 		config:       config,
-		logger:       logger,
 	}, nil
 }

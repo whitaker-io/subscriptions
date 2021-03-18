@@ -18,25 +18,15 @@ func (h *httpProvider) Load(pd *machine.PluginDefinition) (interface{}, error) {
 
 	switch pd.Symbol {
 	case "subscription":
-		return func(attributes map[string]interface{}) machine.Subscription {
-			return client.clientFromAttributes(attributes)
-		}, nil
+		return client.clientFromAttributes(pd.Attributes), nil
 	case "applicative":
-		return func(attributes map[string]interface{}) machine.Applicative {
-			return client.clientFromAttributes(attributes).Applicative
-		}, nil
+		return client.clientFromAttributes(pd.Attributes).Applicative, nil
 	case "fold":
-		return func(attributes map[string]interface{}) machine.Fold {
-			return client.clientFromAttributes(attributes).Fold
-		}, nil
+		return client.clientFromAttributes(pd.Attributes).Fold, nil
 	case "fork":
-		return func(attributes map[string]interface{}) machine.Fork {
-			return client.clientFromAttributes(attributes).Fork
-		}, nil
-	case "sender":
-		return func(attributes map[string]interface{}) machine.Sender {
-			return client.clientFromAttributes(attributes).Sender
-		}, nil
+		return client.clientFromAttributes(pd.Attributes).Fork, nil
+	case "publisher":
+		return client.clientFromAttributes(pd.Attributes), nil
 	case "retriever":
 		return nil, fmt.Errorf("retriever symbol not supported")
 	default:
@@ -231,7 +221,7 @@ func (hs *client) Fork(list []*machine.Packet) ([]*machine.Packet, []*machine.Pa
 	return payload[0], payload[1]
 }
 
-func (hs *client) Sender(data []machine.Data) error {
+func (hs *client) Send(data []machine.Data) error {
 	bytez, err := json.Marshal(data)
 
 	if err != nil {

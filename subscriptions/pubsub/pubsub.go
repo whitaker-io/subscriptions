@@ -12,7 +12,6 @@ import (
 
 type pubsub struct {
 	subscription *ps.Subscription
-	logger       machine.Logger
 }
 
 func (k *pubsub) Read(ctx context.Context) []machine.Data {
@@ -23,13 +22,13 @@ func (k *pubsub) Read(ctx context.Context) []machine.Data {
 		if err := json.Unmarshal(message.Data, &packet); err == nil {
 			payload = []machine.Data{packet}
 		} else if err := json.Unmarshal(message.Data, &payload); err != nil {
-			k.logger.Error(fmt.Sprintf("error unmarshalling from pubsub - %v", err))
+			panic(fmt.Sprintf("error unmarshalling from pubsub - %v", err))
 		}
 		message.Ack()
 	})
 
 	if err != nil {
-		k.logger.Error(fmt.Sprintf("error reading from pubsub - %v", err))
+		panic(fmt.Sprintf("error reading from pubsub - %v", err))
 	}
 
 	return payload
@@ -40,7 +39,7 @@ func (k *pubsub) Close() error {
 }
 
 // New func to provide a machine.Subscription based on Google Pub/Sub
-func New(projectID, subscription, topic string, config *ps.SubscriptionConfig, logger machine.Logger) (machine.Subscription, error) {
+func New(projectID, subscription, topic string, config *ps.SubscriptionConfig) (machine.Subscription, error) {
 	client, err := ps.NewClient(context.Background(), projectID)
 
 	if err != nil {
@@ -57,6 +56,5 @@ func New(projectID, subscription, topic string, config *ps.SubscriptionConfig, l
 
 	return &pubsub{
 		subscription: sub,
-		logger:       logger,
 	}, nil
 }

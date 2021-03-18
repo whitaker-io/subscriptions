@@ -21,7 +21,7 @@ func init() {
 		"Retriever":    reflect.ValueOf((*machine.Retriever)(nil)),
 		"Fold":         reflect.ValueOf((*machine.Fold)(nil)),
 		"Fork":         reflect.ValueOf((*machine.Fork)(nil)),
-		"Publisher":    reflect.ValueOf((*machine.Sender)(nil)),
+		"Publisher":    reflect.ValueOf((*machine.Publisher)(nil)),
 
 		// interface wrapper definitions
 		"_Subscription": reflect.ValueOf((*_github_com_whitaker_io_machine_Subscription)(nil)),

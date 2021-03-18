@@ -2,4 +2,4 @@ module github.com/whitaker-io/components/plugin_providers/goplugin
 
 go 1.16
 
-require github.com/whitaker-io/machine v0.11.29
+require github.com/whitaker-io/machine v0.12.1

@@ -48,7 +48,7 @@ func (k *pubsub) Close() error {
 }
 
 // New func to provide a machine.Subscription based on Google Pub/Sub
-func New(attributes map[string]interface{}) machine.Subscription{
+func New(attributes map[string]interface{}) machine.Subscription {
 	r := &ReadConfig{}
 
 	r.fromMap(attributes)
@@ -56,7 +56,7 @@ func New(attributes map[string]interface{}) machine.Subscription{
 	client, err := ps.NewClient(context.Background(), r.projectID)
 
 	if err != nil {
-		panic err)
+		panic(err)
 	}
 
 	r.SubscriptionConfig.Topic = client.Topic(r.topic)

@@ -4,10 +4,10 @@ import (
 	"fmt"
 
 	"github.com/whitaker-io/components/forks/logical"
-	"github.com/whitaker-io/components/forks/logical"
 	"github.com/whitaker-io/components/subscriptions/kafka"
 	"github.com/whitaker-io/components/subscriptions/pubsub"
 	"github.com/whitaker-io/components/subscriptions/sqs"
+	"github.com/whitaker-io/components/utils"
 	"github.com/whitaker-io/machine"
 )
 
@@ -19,19 +19,18 @@ var subscriptionsMap = map[string]func(attributes map[string]interface{}) machin
 	"sqs":    sqs.New,
 }
 
-
 var forksMap = map[string]func(attributes map[string]interface{}) machine.Fork{
-	"logical":  func(attributes map[string]interface{}) machine.Fork {
+	"logical": func(attributes map[string]interface{}) machine.Fork {
 		if expression, ok := utils.String("expression", attributes); ok {
 			return logical.ForkExpression(expression)
 		}
 
 		panic("missing expression field in attributes")
 	},
-	"duplicate":  func(attributes map[string]interface{}) machine.Fork {
+	"duplicate": func(attributes map[string]interface{}) machine.Fork {
 		return machine.ForkDuplicate
 	},
-	"error":  func(attributes map[string]interface{}) machine.Fork {
+	"error": func(attributes map[string]interface{}) machine.Fork {
 		return machine.ForkError
 	},
 }

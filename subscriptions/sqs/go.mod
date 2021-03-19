@@ -1,4 +1,4 @@
-module github.com/whitaker-io/subscriptions/sqs
+module github.com/whitaker-io/components/subscriptions/sqs
 
 go 1.16
 

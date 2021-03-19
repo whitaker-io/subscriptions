@@ -1,4 +1,4 @@
-module github.com/whitaker-io/subscriptions/kafka
+module github.com/whitaker-io/components/publishers/kafka
 
 go 1.16
 

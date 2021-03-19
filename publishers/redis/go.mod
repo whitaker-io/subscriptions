@@ -1,4 +1,4 @@
-module github.com/whitaker-io/subscriptions/redis
+module github.com/whitaker-io/components/publishers/redis
 
 go 1.16
 

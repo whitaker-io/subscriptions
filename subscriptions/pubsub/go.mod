@@ -1,4 +1,4 @@
-module github.com/whitaker-io/subscriptions/pubsub
+module github.com/whitaker-io/components/subscriptions/pubsub
 
 go 1.16
 

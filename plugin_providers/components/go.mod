@@ -7,5 +7,5 @@ require (
 	github.com/whitaker-io/components/subscriptions/kafka v0.12.7
 	github.com/whitaker-io/components/subscriptions/pubsub v0.12.7
 	github.com/whitaker-io/components/subscriptions/sqs v0.12.7
-	github.com/whitaker-io/machine v0.13.0
+	github.com/whitaker-io/machine v0.13.1
 )

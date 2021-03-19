@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/whitaker-io/components/forks/logical"
+	"github.com/whitaker-io/components/forks/logical"
 	"github.com/whitaker-io/components/subscriptions/kafka"
 	"github.com/whitaker-io/components/subscriptions/pubsub"
 	"github.com/whitaker-io/components/subscriptions/sqs"
@@ -21,7 +22,7 @@ var subscriptionsMap = map[string]func(attributes map[string]interface{}) machin
 
 var forksMap = map[string]func(attributes map[string]interface{}) machine.Fork{
 	"logical":  func(attributes map[string]interface{}) machine.Fork {
-		if expression, ok := attributes["expression"]; ok {
+		if expression, ok := utils.String("expression", attributes); ok {
 			return logical.ForkExpression(expression)
 		}
 

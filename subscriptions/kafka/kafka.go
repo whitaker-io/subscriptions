@@ -11,7 +11,7 @@ import (
 	"github.com/whitaker-io/machine"
 )
 
-type ReaderConfig struct {
+type readerConfig struct {
 	*kaf.ReaderConfig
 }
 
@@ -40,7 +40,7 @@ func (k *kafka) Close() error {
 
 // New func to provide a machine.Subscription based on Kafka
 func New(attributes map[string]interface{}) machine.Subscription {
-	r := &ReaderConfig{}
+	r := &readerConfig{}
 	r.fromMap(attributes)
 
 	return &kafka{
@@ -48,7 +48,7 @@ func New(attributes map[string]interface{}) machine.Subscription {
 	}
 }
 
-func (r *ReaderConfig) fromMap(m map[string]interface{}) {
+func (r *readerConfig) fromMap(m map[string]interface{}) {
 	var ok bool
 
 	if r.Brokers, ok = utils.StringSlice("brokers", m); !ok {

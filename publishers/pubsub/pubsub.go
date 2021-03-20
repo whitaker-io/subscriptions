@@ -8,6 +8,7 @@ import (
 
 	ps "cloud.google.com/go/pubsub"
 
+	"github.com/whitaker-io/components/utils"
 	"github.com/whitaker-io/machine"
 )
 
@@ -16,7 +17,18 @@ type publisher struct {
 }
 
 // New func to provide a machine.Publisher based on Google Pub/Sub
-func New(projectID, topicName string) machine.Publisher {
+func New(attributes map[string]interface{}) machine.Publisher {
+	var ok bool
+	var projectID, topicName string
+
+	if projectID, ok = utils.String("project_id", attributes); !ok {
+		panic(fmt.Errorf("required field projectID missing"))
+	}
+
+	if topicName, ok = utils.String("topic", attributes); !ok {
+		panic(fmt.Errorf("required field topicName missing"))
+	}
+
 	p := &publisher{}
 
 	if client, err := ps.NewClient(context.Background(), projectID); err != nil {

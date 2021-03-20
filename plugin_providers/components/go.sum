@@ -170,6 +170,12 @@ github.com/whitaker-io/components/forks/logical v0.13.9 h1:jxHcy8EuR6c4WDtHcP64C
 github.com/whitaker-io/components/forks/logical v0.13.9/go.mod h1:qftlujz0Gi95FzlGBgNPrO/ss1RWGZRy/oAayOLNt4g=
 github.com/whitaker-io/components/forks/logical v0.13.10 h1:8RtW16taB9GypVbRur/1TKohVzrbxhufhxbbCKFNo2E=
 github.com/whitaker-io/components/forks/logical v0.13.10/go.mod h1:YTRVyNtS15oYoQ5aLNSKhi52Y0Oqjbs1MfXiieqUR3w=
+github.com/whitaker-io/components/publishers/kafka v0.13.10 h1:1hFrbQUCgA7VVoV4LnZ8OTyzCoEk96ivI2+dyzyQowc=
+github.com/whitaker-io/components/publishers/kafka v0.13.10/go.mod h1:jUNEn11oBcfMRKa7Y2zCcQiKiKKabp6aNZfiakUo06Q=
+github.com/whitaker-io/components/publishers/pubsub v0.13.10 h1:GGtv1oVkGSA4sB3PO1De8oHBY0POTsk0wEFDOZjAECA=
+github.com/whitaker-io/components/publishers/pubsub v0.13.10/go.mod h1:dfksTBKyg9s4Hj3kacLdE1ROLC0WWndkwUefGOVTy3s=
+github.com/whitaker-io/components/publishers/sqs v0.13.10 h1:ygHZnslVBUe8HJkpuew2/2EfSZCmG/MfW9/kwqss5Zo=
+github.com/whitaker-io/components/publishers/sqs v0.13.10/go.mod h1:Q/IFLG0IB0GLbeS3aVUJUhyky/ls9nL7i1FJmFm3MTM=
 github.com/whitaker-io/components/subscriptions/kafka v0.12.7 h1:vGnJxR2ezfMWCBzV3cbomH+c5GEgtXzECRA05xFFaiQ=
 github.com/whitaker-io/components/subscriptions/kafka v0.12.7/go.mod h1:oL9XC/iaG166OAutRbQTzqCQ2b+i34F86py1SZFvz3Y=
 github.com/whitaker-io/components/subscriptions/kafka v0.13.1 h1:6bNHxc62wopMI18ITh/kbQ9ybqkHN4lrEo4D9wq+fZM=

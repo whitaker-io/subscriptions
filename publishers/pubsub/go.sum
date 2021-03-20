@@ -237,6 +237,8 @@ github.com/whitaker-io/machine v0.13.9 h1:h4Q010BHbeG1OdjMhMqwpEdHM+fzljFeAPyOcr
 github.com/whitaker-io/machine v0.13.9/go.mod h1:9o1fdHzu9RVGuIdVvd6+YVfvS//KfG+WQDVw8QDhGK0=
 github.com/whitaker-io/machine v0.13.10 h1:31n0gUXSe6X8WUs+3Nv+Rqdv6oHZRa2mR+nYsAUPuLs=
 github.com/whitaker-io/machine v0.13.10/go.mod h1:9o1fdHzu9RVGuIdVvd6+YVfvS//KfG+WQDVw8QDhGK0=
+github.com/whitaker-io/machine v0.13.11 h1:R1TbxDyMjyILHJ+V57zUc0/Uig0Vz1kDu98ucLvNSAg=
+github.com/whitaker-io/machine v0.13.11/go.mod h1:9o1fdHzu9RVGuIdVvd6+YVfvS//KfG+WQDVw8QDhGK0=
 github.com/yuin/goldmark v1.1.25/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=
 github.com/yuin/goldmark v1.1.27/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=
 github.com/yuin/goldmark v1.1.32/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=

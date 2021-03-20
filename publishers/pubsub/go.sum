@@ -153,6 +153,8 @@ github.com/valyala/fasthttp v1.17.0 h1:P8/koH4aSnJ4xbd0cUUFEGQs3jQqIxoDDyRQrUiAk
 github.com/valyala/fasthttp v1.17.0/go.mod h1:jjraHZVbKOXftJfsOYoAjaeygpj5hr8ermTRJNroD7A=
 github.com/valyala/tcplisten v0.0.0-20161114210144-ceec8f93295a h1:0R4NLDRDZX6JcmhJgXi5E4b8Wg84ihbmUKp/GvSPEzc=
 github.com/valyala/tcplisten v0.0.0-20161114210144-ceec8f93295a/go.mod h1:v3UYOV9WzVtRmSR+PDvWpU/qWl4Wa5LApYYX4ZtKbio=
+github.com/whitaker-io/components/utils v0.13.9 h1:NTu4J2mYYmN453AI4PTO4scWpRkyUb7XyF29bDnVVbE=
+github.com/whitaker-io/components/utils v0.13.9/go.mod h1:pegs4WRO+5vMGziFFtBKJgCq8Fw8Q97obXjV0/HnBtM=
 github.com/whitaker-io/machine v0.11.4 h1:NPy53s5xhuE5+naPyo+LRW9ym7mxorO59AFMOHoCezg=
 github.com/whitaker-io/machine v0.11.4/go.mod h1:JwN3ei4KUbV2041ZS5RPhdz5xNizv0JuzpUAht3mKVA=
 github.com/whitaker-io/machine v0.11.10 h1:1ypN8jzo0JuetoHxSwuvsfKdTmjEsh2fzH+PqtfQP20=
@@ -233,6 +235,8 @@ github.com/whitaker-io/machine v0.13.8 h1:D4nXidwQl0qt2a8FrNYRWHOeiTEWkNlK1EkDHb
 github.com/whitaker-io/machine v0.13.8/go.mod h1:9o1fdHzu9RVGuIdVvd6+YVfvS//KfG+WQDVw8QDhGK0=
 github.com/whitaker-io/machine v0.13.9 h1:h4Q010BHbeG1OdjMhMqwpEdHM+fzljFeAPyOcrjDhyg=
 github.com/whitaker-io/machine v0.13.9/go.mod h1:9o1fdHzu9RVGuIdVvd6+YVfvS//KfG+WQDVw8QDhGK0=
+github.com/whitaker-io/machine v0.13.10 h1:31n0gUXSe6X8WUs+3Nv+Rqdv6oHZRa2mR+nYsAUPuLs=
+github.com/whitaker-io/machine v0.13.10/go.mod h1:9o1fdHzu9RVGuIdVvd6+YVfvS//KfG+WQDVw8QDhGK0=
 github.com/yuin/goldmark v1.1.25/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=
 github.com/yuin/goldmark v1.1.27/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=
 github.com/yuin/goldmark v1.1.32/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=

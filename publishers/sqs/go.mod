@@ -4,5 +4,5 @@ go 1.16
 
 require (
 	github.com/aws/aws-sdk-go v1.35.32
-	github.com/whitaker-io/machine v0.13.8
+	github.com/whitaker-io/machine v0.13.9
 )

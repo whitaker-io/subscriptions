@@ -52,6 +52,8 @@ github.com/valyala/tcplisten v0.0.0-20161114210144-ceec8f93295a h1:0R4NLDRDZX6Jc
 github.com/valyala/tcplisten v0.0.0-20161114210144-ceec8f93295a/go.mod h1:v3UYOV9WzVtRmSR+PDvWpU/qWl4Wa5LApYYX4ZtKbio=
 github.com/whitaker-io/components/utils v0.0.0-20210319232723-d9d96640c12f h1:9TN8CNYnuvoJ8SmnuA++SLCJeqOwDGfTM+mgikUATnI=
 github.com/whitaker-io/components/utils v0.0.0-20210319232723-d9d96640c12f/go.mod h1:pegs4WRO+5vMGziFFtBKJgCq8Fw8Q97obXjV0/HnBtM=
+github.com/whitaker-io/data v0.1.2 h1:AmjVjQu0JMjmTxMgQc+jb+Hm9Nbf7PmXytB4XbWvBDY=
+github.com/whitaker-io/data v0.1.2/go.mod h1:a7+TjyUrdKkpbLLGH9FwflI/LU93x5FyQ22mWvoKXQk=
 github.com/whitaker-io/machine v0.11.4 h1:NPy53s5xhuE5+naPyo+LRW9ym7mxorO59AFMOHoCezg=
 github.com/whitaker-io/machine v0.11.4/go.mod h1:JwN3ei4KUbV2041ZS5RPhdz5xNizv0JuzpUAht3mKVA=
 github.com/whitaker-io/machine v0.11.10 h1:1ypN8jzo0JuetoHxSwuvsfKdTmjEsh2fzH+PqtfQP20=
@@ -146,6 +148,8 @@ github.com/whitaker-io/machine v0.14.2 h1:Z/Jhpoh1ZtDusONmHgkg3cBL/Lg4MVteAQlOKj
 github.com/whitaker-io/machine v0.14.2/go.mod h1:KkJE/HibwO4tSrxnXsF/pT9bKzgTKW2M2WBkWxqusTo=
 github.com/whitaker-io/machine v0.14.3 h1:R8b+oFPazPp0H/2LY4VWZYWEwcGOrQ/239OOvssH0Q4=
 github.com/whitaker-io/machine v0.14.3/go.mod h1:KkJE/HibwO4tSrxnXsF/pT9bKzgTKW2M2WBkWxqusTo=
+github.com/whitaker-io/machine v0.14.4 h1:Px3n6m8VEkvwP6t+t/P1P+g/NU5Yls/ES9bXKsf8YaY=
+github.com/whitaker-io/machine v0.14.4/go.mod h1:w6XBGwgfaa4QnGDK5urVRsrU4kdgkoo/ceX4smVTOMk=
 go.opentelemetry.io/otel v0.13.0 h1:2isEnyzjjJZq6r2EKMsFj4TxiQiexsM04AVhwbR/oBA=
 go.opentelemetry.io/otel v0.13.0/go.mod h1:dlSNewoRYikTkotEnxdmuBHgzT+k/idJSfDv/FxEnOY=
 go.opentelemetry.io/otel v0.18.0 h1:d5Of7+Zw4ANFOJB+TIn2K3QWsgS2Ht7OU9DqZHI6qu8=
